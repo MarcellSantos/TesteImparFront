@@ -30,7 +30,7 @@ export default function Home() {
   async function LoadData() {
     let api = axiosCon;
 
-    let response = await api.get(linkApi + `api/Car/ListCarsPerPage?${(actualPage)}&step=10`) //+ (SearchText != "" ? `&title=${SearchText}` : ""));
+    let response = await api.get(linkApi + `api/Car/ListCarsPerPage?page=${(actualPage)}&step=10`) //+ (SearchText != "" ? `&title=${SearchText}` : ""));
     let tmpArr: Array<any> = [];
     tmpArr.concat(response.data.content.response, listData);
     setlistData(response.data.content.response);
