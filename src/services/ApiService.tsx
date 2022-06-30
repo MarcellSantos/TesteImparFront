@@ -5,7 +5,7 @@ export const linkApi="https://localhost:44303/";
 
 export const axiosCon = axios.create({
     baseURL: linkApi,
-    timeout: 5000,    
+       
   });
 
 //teste https://localhost:44303/
